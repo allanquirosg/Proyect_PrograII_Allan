@@ -10,6 +10,9 @@ namespace Datos
 {
     public class cls_datos
     {
+
+        // prueba
+
         public CD_Conexion conexion = new CD_Conexion();
 
         SqlDataReader leer;
