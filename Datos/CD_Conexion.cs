@@ -11,7 +11,7 @@ namespace Datos
     public class CD_Conexion
     {
 
-        private SqlConnection Conexion = new SqlConnection("Data Source=DESKTOP-OIQSSMB\\SQLEXPRESS;Initial Catalog=FARMACIA;Integrated Security=True");
+        private SqlConnection Conexion = new SqlConnection("Data Source=DESKTOP-JD3OBET\\SQLEXPRESS;Initial Catalog=FARMACIA;Integrated Security=True");
 
         public SqlConnection AbrirConexion()
         {

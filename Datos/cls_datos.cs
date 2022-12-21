@@ -66,6 +66,22 @@ namespace Datos
             comando.Parameters.Clear();
         }
 
+        public void Insertar_Usuario(int id_usuario, string usuario, string password, string rol)
+        {
 
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "INGRESA_USUARIO";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@id_usuario", id_usuario);
+            comando.Parameters.AddWithValue("@usuario", usuario);
+            comando.Parameters.AddWithValue("@password", password);
+            comando.Parameters.AddWithValue("@rol", rol);
+
+
+            comando.ExecuteNonQuery();
+
+            comando.Parameters.Clear();
+
+        }
     }
 }

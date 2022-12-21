@@ -93,8 +93,11 @@ namespace GUI
                     objeto.Editar(txt_id_producto.Text, txt_nombre_producto.Text, txt_precio.Text);
                     MessageBox.Show("Listo");
                     Mostrar();
-
+                   
                     Editar = false;
+                    txt_id_producto.Clear();
+                    txt_nombre_producto.Clear();
+                    txt_precio.Clear();
                 }
                 catch (Exception ex)
                 {
@@ -105,6 +108,29 @@ namespace GUI
 
 
 
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Cerrar(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            this.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            txt_id_producto.Clear();
+            txt_nombre_producto.Clear();
+            txt_precio.Clear();
         }
     }
 }

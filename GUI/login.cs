@@ -13,7 +13,7 @@ namespace GUI
     public partial class login : Form
     {
 
-        CLS_ConexionBD conn = new CLS_ConexionBD("Data Source=DESKTOP-OIQSSMB\\SQLEXPRESS;Initial Catalog=FARMACIA;Integrated Security=True");
+        CLS_ConexionBD conn = new CLS_ConexionBD("Data Source=DESKTOP-JD3OBET\\SQLEXPRESS;Initial Catalog=FARMACIA;Integrated Security=True");
 
         public login()
         {
@@ -43,11 +43,15 @@ namespace GUI
             {
                 user = arr_usuario[0];
                 admin = arr_usuario[1];
+                this.Visible = false;
                 MessageBox.Show("Bienvenido al sistema");
 
-                Form1 objForm = new Form1();
+                Menu objForm = new Menu();
                 objForm.ShowDialog();
-                this.Hide();
+                this.Visible = false;
+
+
+
 
             }
         }

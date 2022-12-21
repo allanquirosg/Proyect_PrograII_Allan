@@ -59,13 +59,34 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registro_empresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registro_empresa.Designer.cs">
+      <DependentUpon>registro_empresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registro_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registro_login.Designer.cs">
+      <DependentUpon>registro_login.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,6 +98,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="registro_empresa.resx">
+      <DependentUpon>registro_empresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registro_login.resx">
+      <DependentUpon>registro_login.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -102,6 +129,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fact2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\broom.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\button.png" />
+    <Content Include="Resources\flecha-izquierda.png" />
+    <None Include="Resources\import.png" />
+    <None Include="Resources\log-in.png" />
+    <None Include="Resources\pharmacy.png" />
+    <None Include="Resources\flecha-izquierda1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
