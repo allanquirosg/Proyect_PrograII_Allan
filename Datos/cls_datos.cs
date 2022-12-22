@@ -83,5 +83,70 @@ namespace Datos
             comando.Parameters.Clear();
 
         }
+
+
+        public void Insertar_Empresa(int ced_juridica, string nombre_empresa, string razon_social )
+        {
+
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "INGRESA_Empresa";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@ced_juridica", ced_juridica);
+            comando.Parameters.AddWithValue("@nombre_empresa", nombre_empresa);
+            comando.Parameters.AddWithValue("@razon_social", razon_social);
+            
+
+
+            comando.ExecuteNonQuery();
+
+            comando.Parameters.Clear();
+
+        }
+
+        public void Insertar_Venta(int ID_PRODUCTO, int ID_Cliente, int Cantidad, string Razon)
+        {
+
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "Ingresa_Registro";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@ID_PRODUCTO", ID_PRODUCTO);
+            comando.Parameters.AddWithValue("@ID_Cliente", ID_Cliente);
+            comando.Parameters.AddWithValue("@Cantidad", Cantidad);
+            comando.Parameters.AddWithValue("@Razon", Razon);
+
+
+
+
+            comando.ExecuteNonQuery();
+
+            comando.Parameters.Clear();
+
+        }
+
+        public DataTable Mostrar1()
+        {
+
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "Mostrar1";
+            comando.CommandType = CommandType.StoredProcedure;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+
+        }
+
+        public DataTable Mostrar2()
+        {
+
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "Mostrar2";
+            comando.CommandType = CommandType.StoredProcedure;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+
+        }
     }
 }

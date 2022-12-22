@@ -74,5 +74,11 @@ namespace GUI
             RegEmpresa.ShowDialog();
 
         }
+
+        private void crearVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Factura VenFac = new Factura();
+            VenFac.ShowDialog();
+        }
     }
 }

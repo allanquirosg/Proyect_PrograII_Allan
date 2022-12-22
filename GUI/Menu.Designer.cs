@@ -41,6 +41,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.crearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +51,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
+            this.crearToolStripMenuItem,
             this.txttitulo,
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -86,14 +89,14 @@
             // agregarUsuarioToolStripMenuItem
             // 
             this.agregarUsuarioToolStripMenuItem.Name = "agregarUsuarioToolStripMenuItem";
-            this.agregarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.agregarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.agregarUsuarioToolStripMenuItem.Text = "Agregar Usuario";
             this.agregarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.agregarUsuarioToolStripMenuItem_Click);
             // 
             // agregarEmpresaToolStripMenuItem
             // 
             this.agregarEmpresaToolStripMenuItem.Name = "agregarEmpresaToolStripMenuItem";
-            this.agregarEmpresaToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.agregarEmpresaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.agregarEmpresaToolStripMenuItem.Text = "Agregar Empresa ";
             this.agregarEmpresaToolStripMenuItem.Click += new System.EventHandler(this.agregarEmpresaToolStripMenuItem_Click);
             // 
@@ -151,6 +154,21 @@
             this.button1.TabIndex = 3;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // crearToolStripMenuItem
+            // 
+            this.crearToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearVentaToolStripMenuItem});
+            this.crearToolStripMenuItem.Name = "crearToolStripMenuItem";
+            this.crearToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
+            this.crearToolStripMenuItem.Text = "Crear";
+            // 
+            // crearVentaToolStripMenuItem
+            // 
+            this.crearVentaToolStripMenuItem.Name = "crearVentaToolStripMenuItem";
+            this.crearVentaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.crearVentaToolStripMenuItem.Text = "Crear Venta";
+            this.crearVentaToolStripMenuItem.Click += new System.EventHandler(this.crearVentaToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -186,5 +204,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem agregarEmpresaToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem crearToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearVentaToolStripMenuItem;
     }
 }
